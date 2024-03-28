@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Experiment</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<h1 style="text-align: center;">AMULYA MAURYA EXP-7</h1>
+
+
+<!-- Dropdown Menu -->
+<div class="dropdown">
+  <button class="dropdown-btn">Dropdown Menu</button>
+  <div class="dropdown-content">
+    <a href="#">Option 1</a>
+    <a href="#">Option 2</a>
+    <a href="#">Option 3</a>
+  </div>
+</div>
+
+<!-- Context Menu -->
+<div id="contextMenu" class="context-menu">
+  <a href="#">Context Option 1</a>
+  <a href="#">Context Option 2</a>
+  <a href="#">Context Option 3</a>
+</div>
+
+
+<button class="accordion">Accordion Menu</button>
+<div class="panel">
+  <p>Accordion Option 1</p>
+  <p>Accordion Option 2</p>
+  <p>Accordion Option 3</p>
+</div>
+<!-- Mega Menu -->
+<ul class="mega-menu">
+  <li>Mega Option 1</li>
+  <li>Mega Option 2</li>
+  <li>Mega Option 3</li>
+</ul>
+
+<!-- Pie Menu -->
+<div class="pie-menu">
+  <div class="pie-menu-item">1</div>
+  <div class="pie-menu-item">2</div>
+  <div class="pie-menu-item">3</div>
+  <div class="pie-menu-item">4</div>
+  <div class="pie-menu-item">5</div>
+</div>
+
+
+
+<!-- Toolbar Menu -->
+<div class="toolbar-menu">
+  <button class="toolbar-btn">Option 1</button>
+  <button class="toolbar-btn">Option 2</button>
+  <button class="toolbar-btn">Option 3</button>
+  <!-- <button class="toolbar-btn">Option 4</button>
+  <button class="toolbar-btn">Option 5</button> -->
+</div>
+
+<!-- Search-based Menu -->
+<div class="search-menu">
+  <input type="text" id="searchInput" placeholder="Search...">
+  <div id="searchResults"></div>
+</div>
+
+
+<!-- <div>
+Dropdown Menu: A traditional menu where options drop down when clicked or hovered over.
+<hr>
+Context Menu: Also known as a right-click menu or popup menu, it appears when the user interacts with a specific element, providing relevant options.
+<hr>
+Accordion Menu: A vertically stacked menu where only one menu item is expanded at a time, and clicking on another collapses the previously expanded item.
+<hr>
+Mega Menu: A large, multi-column menu that typically displays navigation options, often used in websites with complex hierarchies.
+<hr>
+Pie Menu: Circular menus where options are arranged in a pie-like shape around a central point, often used in touch interfaces.
+</div> -->
+<script>
+  // JavaScript for Accordion Menu
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+
+  // JavaScript for Context Menu
+  window.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    var contextMenu = document.getElementById('contextMenu');
+    contextMenu.style.top = e.clientY + 'px';
+    contextMenu.style.left = e.clientX + 'px';
+    contextMenu.style.display = 'block';
+  });
+
+  window.addEventListener('click', function(e) {
+    var contextMenu = document.getElementById('contextMenu');
+    if (!contextMenu.contains(e.target)) {
+      contextMenu.style.display = 'none';
+    }
+  });
+
+  // JavaScript for Pie Menu
+  var pieMenuItems = document.querySelectorAll('.pie-menu-item');
+
+  pieMenuItems.forEach(function(item, index) {
+    var angle = (index / pieMenuItems.length) * Math.PI * 2;
+    var x = Math.cos(angle) * 100;
+    var y = Math.sin(angle) * 100;
+    item.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+  });
+
+
+
+// JavaScript for Search-based Menu
+var searchInput = document.getElementById('searchInput');
+var searchResults = document.getElementById('searchResults');
+
+searchInput.addEventListener('input', function() {
+  var query = searchInput.value.toLowerCase();
+  // Perform search and display results
+  searchResults.innerHTML = ''; // Clear previous results
+  if (query.trim() !== '') {
+    // Here you can perform search operations and populate searchResults accordingly
+    // For demonstration, let's just show some dummy results
+    for (var i = 1; i <= 5; i++) {
+      var resultItem = document.createElement('div');
+      resultItem.textContent = 'Search Result ' + i;
+      searchResults.appendChild(resultItem);
+    }
+  }
+});
+
+// JavaScript for Radial Menu and Cascading Submenu
+window.addEventListener('contextmenu', function(e) {
+  e.preventDefault(); // Prevent the default context menu
+});
+
+window.addEventListener('click', function(e) {
+  // Check if the left mouse button is clicked
+  if (e.button === 0) {
+    var radialMenu = document.getElementById('radialMenu');
+    radialMenu.style.left = e.clientX - radialMenu.offsetWidth + 'px'; // Position the radial menu on the left side
+    radialMenu.style.top = e.clientY + 'px';
+    radialMenu.style.display = 'block';
+  }
+});
+
+// Show Submenu on Hover
+var mainMenuItems = document.querySelectorAll('.radial-menu-item');
+
+mainMenuItems.forEach(function(item) {
+  item.addEventListener('mouseenter', function() {
+    var submenu = this.querySelector('.submenu');
+    if (submenu) {
+      submenu.style.display = 'block';
+    }
+  });
+
+  item.addEventListener('mouseleave', function() {
+    var submenu = this.querySelector('.submenu');
+    if (submenu) {
+      submenu.style.display = 'none';
+    }
+  });
+});
+
+
+
+</script>
+
+</body>
+</html>

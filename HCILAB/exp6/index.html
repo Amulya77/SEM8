@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestalt Principles Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gestalt Principles in Action</h1>
+    <p>This is an example of applying various Gestalt principles to create a simple and user-friendly interface.</p>
+    <p>Made by: <h4>AMULYA MAURYA</h4> UID: <b>20BCS6853</b></p>
+    <section class="card-group">
+      <div class="card similar">
+        <h2>Play1</h2>
+        
+      </div>
+      <div class="card similar">
+        <h2>Play2</h2>
+        
+      </div>
+    </section>
+    <section class="task-list">
+      <h2>Tasks</h2>
+      <ul>
+        <li>
+          <input type="checkbox" id="task1">
+          <label for="task1">Complete this task.</label>
+        </li>
+        <li>
+          <input type="checkbox" id="task2">
+          <label for="task2">Go for a walk.</label>
+        </li>
+      </ul>
+    </section>
+    <section class="search-bar">
+      <input type="text" placeholder="Search..." aria-label="Search">
+    </section>
+    <section class="image-editor">
+      <img src="./img.png" alt="Image to edit">
+      <div class="tools">
+        <button>Crop</button>
+        <button>Rotate</button>
+        <button>Resize</button>
+
+      </div>
+    </section>
+  </div>
+
+  <div class="Dibba">
+    <p>Here's a breakdown of HTML structure and CSS styling demonstrate the Gestalt principles:
+        <br> 
+        <hr>
+        <b>1. Similarity</b>
+        <span id="Similarity">
+        Play/Pause buttons: They share the same shape, color (.similar class), and visual style. This signals their relatedness and function to the user.
+        </span>
+        <hr>
+        
+        <b>2. Proximity</b>
+        <span id="Proximity">
+        Checkboxes and task labels: Located close together, users naturally perceive them as connected items.
+        Image editor tools: The "Crop", "Rotate", and "Resize" buttons are grouped in close proximity, conveying a relationship as a set of tools.
+        </span>
+        <hr>
+        
+        <b>3. Closure</b>
+        <span id="Closure">
+        Cards and sections: Although subtle, the boxes around cards and sections suggest complete shapes, even if the borders aren't fully "closed". This helps users recognize them as distinct units of information.
+        </span>
+        <hr>
+        
+        <b>4. Continuation</b>
+        <span id="Continuation">
+        Placeholder in the search bar: Though the search bar has a background, the fainter placeholder text implies a line that could continue further to the right, leading the user in the direction they should type.
+        <hr>
+        </span>
+        
+        <b>5. Figure-Ground</b>
+        <span id="Figure-Ground">
+        Cards, sections, search bar: Each has a background color that distinguishes it from the main page background, instantly drawing the user's focus to the content.
+        Image editor: The image itself is the figure against the tool section's background. This separation lets the user concentrate on editing actions.
+        <hr>
+        </span>
+
+        
+        <b>6. Symmetry & Order</b>
+        <span id="Symmetry">
+        Overall layout: Content is placed within a central container, creating a sense of balance.
+        Card alignment: Cards are spaced symmetrically, providing a sense of organization and calmness.
+        Tool buttons: Evenly spaced and consistently styled buttons create order and predictability.
+        </span>   
+    </p> 
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>

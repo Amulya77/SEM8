@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+h2{
+   color: rgb(235, 58, 58);
+}
+
+ul{
+    background-color: rgb(243, 253, 203);
+    font-size: large;
+   
+}
+
+li{
+    padding: 10px;
+}
+
+@media only screen and (max-device-width: 480px) {
+    /* Specific styles for Android devices */
+    body {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    header {
+        padding: 10px 0; /* Adjust header padding */
+    }
+
+    main {
+        padding: 10px; /* Adjust main content padding */
+    }
+
+    footer {
+        padding: 5px 0; /* Adjust footer padding */
+    }
+}

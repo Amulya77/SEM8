@@ -1,0 +1,126 @@
+
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+  
+  .card-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+    background-color: #bd4545;
+    width: 15%;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+  
+  
+  
+  .task-list {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .search-bar {
+    background-color: #2972ad;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+  }
+  
+  .search-bar input::placeholder {
+    color: #ccc;
+  }
+  
+  .image-editor {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .image-editor img {
+    width: 30vmin;
+    height: 20vmin;
+    border-radius: 5px;
+  }
+  
+  .image-editor .tools {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+  
+  .image-editor button {
+    display: flex;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    background-color: gray;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+ 
+
+  #Similarity{
+    color: #43a9ec;
+  }
+
+  #Proximity{
+    color: #0e90a1;
+  }
+
+  #Closure{
+    color: #6c31f7;
+  }
+
+  #Continuation{
+    color:rgb(66, 66, 163);
+  }
+  #Figure-Ground{
+    color: #2a9fc9;
+  }
+
+  #Symmetry{
+    color:red;
+  }
